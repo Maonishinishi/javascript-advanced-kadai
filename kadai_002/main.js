@@ -100,19 +100,18 @@ const gameOver = id => {
     
     clearInterval(id);
 
-    setTimeout(() => {
-        count.style.display = 'none';
-        typecount.style.display ='none';
-        typedfield.textContent ='';
-        untypedfield.textContent = 'タイムアップ！';
-    }, 1);
+    count.style.display = 'none';
+    typecount.style.display ='none';
+    typedfield.textContent ='';
+    untypedfield.textContent = 'タイムアップ！';
+
 
     setTimeout(() => {
     const result = confirm(rankCheck(score));
     if(result == true) {
         window.location.reload();
     }
-    }, 100);
+    }, 10);
 };
 
 
